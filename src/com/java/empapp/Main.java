@@ -41,6 +41,11 @@ public class Main {
                     dao.createEmployee(employee);
                 }
                 case 2 -> dao.showEmployee();
+                case 3 -> {
+                    System.out.println("Enter id of user you wish to access: ");
+                    int id = scanner.nextInt();
+                    dao.showEmployeeBasedOnID(id);
+                }
                 default -> System.out.println("Invalid choice!!");
             }
         }while(true);

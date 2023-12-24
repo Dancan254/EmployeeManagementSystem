@@ -5,6 +5,8 @@ import com.java.empapp.Employee;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class EmployeeDaoImpl implements EmployeeDaoInterface{
     Connection con;
@@ -30,12 +32,40 @@ public class EmployeeDaoImpl implements EmployeeDaoInterface{
 
     @Override
     public void showEmployee() {
-
+        con = DBConnection.createDbConnection();
+        String query = "select * from employee";
+        try{
+            Statement statement = con.createStatement();
+            ResultSet set = statement.executeQuery(query);
+            System.out.println("Id\tName\t\tSalary\t\t\tAge");
+            while(set.next()){
+                System.out.printf("%d\t%-10s\t%.2f\t\t%d%n", set.getInt(1),
+                        set.getString(2), set.getDouble(3),
+                        set.getInt(4)
+                );
+            }
+            System.out.println();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void showEmployeeBasedOnID(int id) {
-
+        con = DBConnection.createDbConnection();
+        String query = "select * from employee where id = ?";
+        try{
+            Statement statement = con.createStatement();
+            ResultSet set = statement.executeQuery(query);
+            while(set.next()) {
+                System.out.printf("%d\t%-10s\t%.2f\t\t%d%n", set.getInt(1),
+                        set.getString(2), set.getDouble(3),
+                        set.getInt(4)
+                );
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
