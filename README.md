@@ -13,14 +13,14 @@ A simple Java-based Employee Management System that interacts with a database to
 ## Technologies Used
 
 - Java
-- Your Database Technology (e.g., MySQL, PostgreSQL)
+- MYQL
 
 ## Getting Started
 
 ### Prerequisites
 
 - Java Development Kit (JDK) installed
-- Your Database Server installed and running
+- MSQL Server installed and running
 
 ### Installation
 
