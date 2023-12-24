@@ -78,9 +78,3 @@ If you would like to contribute to the project, follow these steps:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Mention any libraries, tutorials, or resources that you found helpful.
-
-Feel free to customize the README based on your specific project details and preferences.
