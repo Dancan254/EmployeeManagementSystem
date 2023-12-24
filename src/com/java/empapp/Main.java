@@ -41,7 +41,7 @@ public class Main {
                     dao.createEmployee(employee);
                 }
                 case 2 -> dao.showEmployee();
-                default -> System.out.println("Invalid choice!!!");
+                default -> System.out.println("Invalid choice!!");
             }
         }while(true);
     }
