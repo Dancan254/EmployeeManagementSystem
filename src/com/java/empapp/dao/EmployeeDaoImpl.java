@@ -44,7 +44,7 @@ public class EmployeeDaoImpl implements EmployeeDaoInterface{
                         set.getString(2), set.getDouble(3),
                         set.getInt(4)
                 );
-                System.out.println("_ _ ".repeat(30));
+                System.out.println("_ _ ".repeat(20));
             }
 
         }catch (Exception e){
@@ -55,12 +55,13 @@ public class EmployeeDaoImpl implements EmployeeDaoInterface{
     @Override
     public void showEmployeeBasedOnID(int id) {
         con = DBConnection.createDbConnection();
-        String query = "select * from employee where id =" + id;
+        String query = "select * from employee where id = ?";
         try{
-            Statement statement = con.createStatement();
-            ResultSet set = statement.executeQuery(query);
+            PreparedStatement statement = con.prepareStatement(query);
+            statement.setInt(1, id);
+            ResultSet set = statement.executeQuery();
             System.out.println("Id\tName\t\tSalary\t\t\tAge");
-            System.out.println("_ _ ".repeat(30));
+            System.out.println("_ _ ".repeat(20));
             while(set.next()) {
                 System.out.printf("%d\t%-10s\t%.2f\t\t%d%n", set.getInt(1),
                         set.getString(2), set.getDouble(3),
