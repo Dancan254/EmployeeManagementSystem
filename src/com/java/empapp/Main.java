@@ -9,6 +9,8 @@ public class Main {
 
     private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
+        String name;
+        int id;
         //object of employee dao
         EmployeeDaoInterface dao = new EmployeeDaoImpl();
         System.out.println("Welcome to employee management application");
@@ -26,10 +28,10 @@ public class Main {
                 case 1 -> {
                     Employee employee = new Employee();
                     System.out.println("Enter ID: ");
-                    int id = scanner.nextInt();
+                    id = scanner.nextInt();
                     System.out.println("Enter name: ");
                     scanner.nextLine();
-                    String name = scanner.nextLine();
+                    name = scanner.nextLine();
                     System.out.println("Enter salary: ");
                     double salary = scanner.nextDouble();
                     System.out.println("Enter age: ");
@@ -43,8 +45,16 @@ public class Main {
                 case 2 -> dao.showEmployee();
                 case 3 -> {
                     System.out.println("Enter id of user you wish to access: ");
-                    int id = scanner.nextInt();
+                    id = scanner.nextInt();
                     dao.showEmployeeBasedOnID(id);
+                }
+                case 4 -> {
+                    System.out.println("Enter Id of employee: ");
+                    id = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.println("Enter new name: ");
+                    name = scanner.nextLine();
+                    dao.updateEmployee(id, name);
                 }
                 default -> System.out.println("Invalid choice!!");
             }
