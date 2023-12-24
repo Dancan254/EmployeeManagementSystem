@@ -15,16 +15,17 @@ public class Main {
         EmployeeDaoInterface dao = new EmployeeDaoImpl();
         System.out.println("Welcome to employee management application");
 
+        int choice = 0;
         do{
             System.out.println("""
                     1. Add employee
                     2. Show All employee
                     3. Show Employee based on id
                     4. Update employee
-                    5. Delete employee""");
+                    5. Delete employee
+                    6. Exit""");
             System.out.println("Input option");
-            int choice = scanner.nextInt();
-            switch (choice){
+            switch (choice = scanner.nextInt()){
                 case 1 -> {
                     Employee employee = new Employee();
                     System.out.println("Enter ID: ");
@@ -56,8 +57,17 @@ public class Main {
                     name = scanner.nextLine();
                     dao.updateEmployee(id, name);
                 }
+                case 5 -> {
+                    System.out.println("Enter Id of user you wish to delete: ");
+                    id = scanner.nextInt();
+                    dao.deleteEmployee(id);
+                }
+                case 6 ->{
+                    System.out.println("Thank you for using our services!!!");
+                    scanner.close();
+                }
                 default -> System.out.println("Invalid choice!!");
             }
-        }while(true);
+        }while(choice != 6);
     }
 }
