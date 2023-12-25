@@ -23,7 +23,7 @@ public class EmployeeDaoImpl implements EmployeeDaoInterface{
             pstm.setInt(4, employee.getAge());
             int count = pstm.executeUpdate();
             if (count != 0){
-                System.out.println("Employee inserted successfully");
+                System.out.println("Employee added successfully");
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -46,7 +46,6 @@ public class EmployeeDaoImpl implements EmployeeDaoInterface{
                 );
                 System.out.println("_ _ ".repeat(10));
             }
-
         }catch (Exception e){
             e.printStackTrace();
         }
