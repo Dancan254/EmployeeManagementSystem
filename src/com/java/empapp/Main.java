@@ -13,7 +13,7 @@ public class Main {
         int id;
         //object of employee dao
         EmployeeDaoInterface dao = new EmployeeDaoImpl();
-        System.out.println("Welcome to employee management application");
+        System.out.println("Welcome to employee management application system");
 
         int choice = 0;
         do{
