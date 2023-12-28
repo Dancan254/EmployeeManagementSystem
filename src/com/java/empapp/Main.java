@@ -15,7 +15,7 @@ public class Main {
         EmployeeDaoInterface dao = new EmployeeDaoImpl();
         System.out.println("Welcome to employee management application system");
 
-        int choice = 0;
+        int choice;
         do{
             System.out.println("""
                     1. Add employee
@@ -27,7 +27,7 @@ public class Main {
             System.out.println("Input option");
             switch (choice = scanner.nextInt()){
                 case 1 -> {
-                    Employee employee = new Employee();
+                    Employee employee;
                     System.out.println("Enter ID: ");
                     id = scanner.nextInt();
                     System.out.println("Enter name: ");
