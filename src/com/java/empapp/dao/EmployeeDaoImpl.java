@@ -16,12 +16,12 @@ public class EmployeeDaoImpl implements EmployeeDaoInterface{
         con = DBConnection.createDbConnection();
         String query ="insert into employee values(?, ?, ?, ?)";
         try {
-            PreparedStatement pstm = con.prepareStatement(query);
-            pstm.setInt(1, employee.getId());
-            pstm.setString(2, employee.getName());
-            pstm.setDouble(3, employee.getSalary());
-            pstm.setInt(4, employee.getAge());
-            int count = pstm.executeUpdate();
+            PreparedStatement preparedStatement = con.prepareStatement(query);
+            preparedStatement.setInt(1, employee.getId());
+            preparedStatement.setString(2, employee.getName());
+            preparedStatement.setDouble(3, employee.getSalary());
+            preparedStatement.setInt(4, employee.getAge());
+            int count = preparedStatement.executeUpdate();
             if (count != 0){
                 System.out.println("Employee added successfully");
             }
