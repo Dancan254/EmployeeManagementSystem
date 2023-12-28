@@ -2,11 +2,8 @@ package com.java.empapp.DBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
-
 public class DBConnection {
-    static Connection connection;
-
+    private static Connection connection;
 
     public static Connection createDbConnection(){
         //load driver

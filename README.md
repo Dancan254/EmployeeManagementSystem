@@ -13,14 +13,14 @@ A simple Java-based Employee Management System that interacts with a database to
 ## Technologies Used
 
 - Java
-- Your Database Technology (e.g., MySQL, PostgreSQL)
+- MYQL
 
 ## Getting Started
 
 ### Prerequisites
 
 - Java Development Kit (JDK) installed
-- Your Database Server installed and running
+- MSQL Server installed and running
 
 ### Installation
 
@@ -78,9 +78,3 @@ If you would like to contribute to the project, follow these steps:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Mention any libraries, tutorials, or resources that you found helpful.
-
-Feel free to customize the README based on your specific project details and preferences.
