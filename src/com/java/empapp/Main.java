@@ -37,10 +37,11 @@ public class Main {
                     double salary = scanner.nextDouble();
                     System.out.println("Enter age: ");
                     int age = scanner.nextInt();
-                    employee.setId(id);
-                    employee.setName(name);
-                    employee.setSalary(salary);
-                    employee.setAge(age);
+//                    employee.setId(id);
+//                    employee.setName(name);
+//                    employee.setSalary(salary);
+//                    employee.setAge(age);
+                    employee = new Employee(id, name, salary, age);
                     dao.createEmployee(employee);
                 }
                 case 2 -> dao.showEmployee();
