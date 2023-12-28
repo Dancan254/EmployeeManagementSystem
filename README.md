@@ -13,7 +13,7 @@ A simple Java-based Employee Management System that interacts with a database to
 ## Technologies Used
 
 - Java
-- MYQL
+- MYSQL
 
 ## Getting Started
 
