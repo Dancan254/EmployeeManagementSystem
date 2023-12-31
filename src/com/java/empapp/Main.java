@@ -46,7 +46,7 @@ public class Main {
                 }
                 case 2 -> dao.showEmployee();
                 case 3 -> {
-                    System.out.println("Enter id of user you wish to access: ");
+                    System.out.println("Enter the id of the user you wish to access: ");
                     id = scanner.nextInt();
                     dao.showEmployeeBasedOnID(id);
                 }
@@ -59,7 +59,7 @@ public class Main {
                     dao.updateEmployee(id, name);
                 }
                 case 5 -> {
-                    System.out.println("Enter Id of user you wish to delete: ");
+                    System.out.println("Enter the Id of the user you wish to delete: ");
                     id = scanner.nextInt();
                     dao.deleteEmployee(id);
                 }
