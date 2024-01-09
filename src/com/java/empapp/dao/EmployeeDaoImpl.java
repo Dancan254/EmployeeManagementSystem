@@ -1,6 +1,6 @@
 package com.java.empapp.dao;
 
-import com.java.empapp.DBC.DBConnection;
+import com.java.empapp.dbc.DBConnection;
 import com.java.empapp.Employee;
 
 import java.sql.Connection;

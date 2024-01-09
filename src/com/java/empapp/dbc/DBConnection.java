@@ -1,4 +1,4 @@
-package com.java.empapp.DBC;
+package com.java.empapp.dbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
