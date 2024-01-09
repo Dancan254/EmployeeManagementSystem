@@ -85,7 +85,7 @@ public class EmployeeDaoImpl implements EmployeeDaoInterface{
             System.out.println("Successfully updated employee");
         }
         }catch (Exception e){
-            e.printStackTrace();
+            e.getMessage();
         }
     }
 
